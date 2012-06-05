@@ -15,5 +15,6 @@ require 'message_filter'
      subject { MessageFilter.new('foo', 'bar') }
      it { should be_detect('hello from bar') }
      it_should_behave_like 'MessageFilter with argument "foo"'
+     it { should have(2).ng_words }
    end
  end
