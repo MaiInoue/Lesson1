@@ -9,7 +9,7 @@ require 'message_filter'
    context 'with argument "foo"' do
      subject { MessageFilter.new('foo') }
      it_should_behave_like 'MessageFilter with argument "foo"'
-     its(:ng_words) { should have(1).items }
+     it { should have(1).ng_words }
    end
    context 'with argument "foo","bar"' do
      subject { MessageFilter.new('foo', 'bar') }
