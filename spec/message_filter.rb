@@ -1,8 +1,11 @@
 class MessageFilter
-  def initialize(*words)
-    @words = words
+   def initialize(*words)
+    @ng_words = words
    end
-  def detect?(text)
-    @words.any?{|w| text.include?(w) } 
+   
+  attr_reader :ng_words
+  
+   def detect?(text)
+    @ng_words.any?{|w| text.include?(w) }
    end
 end

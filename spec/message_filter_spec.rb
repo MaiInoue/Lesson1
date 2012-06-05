@@ -4,6 +4,7 @@ require 'message_filter'
    share_examples_for 'MessageFilter with argument "foo"' do
      it { should be_detect('hello from foo') }
      it { should_not be_detect('hello, world!') }
+     its(:ng_words) { should_not be_empty }
    end
    context 'with argument "foo"' do
      subject { MessageFilter.new('foo') }
