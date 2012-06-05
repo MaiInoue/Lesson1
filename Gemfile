@@ -47,3 +47,5 @@ end
 
 # For javascript error
 gem 'therubyracer', '>= 0.9.2'
+
+gem 'rspec'
